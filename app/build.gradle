@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.github.ben-manes.versions'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.joaocsousa.weatherapp"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:${libraries.appcompat}"
+    // utils
+    compile "com.jakewharton:butterknife:${libraries.butterknife}"
+    // rx
+    compile "io.reactivex:rxandroid:${libraries.rx}"
+    compile "io.reactivex:rxjava:${libraries.rx}"
+    // di
+    compile "com.google.dagger:dagger:${libraries.dagger}"
+    compile "com.google.dagger:dagger-compiler:${libraries.dagger}"
+    // api
+    compile "com.squareup.okhttp3:okhttp:${libraries.okhttp}"
+    compile "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
+    compile "com.squareup.retrofit2:converter-gson:${libraries.retrofit}"
+    // test
+    testCompile "junit:junit:${libraries.junit}"
+    testCompile "org.robolectric:robolectric:${libraries.robolectric}"
+    testCompile "org.mockito:mockito-core:${libraries.mockito}"
+    testCompile "com.squareup.okhttp3:mockwebserver:${libraries.mockokhttp}"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:${libraries.espresso}"
+    androidTestCompile "com.android.support:support-annotations:${libraries.appcompat}"
+}
