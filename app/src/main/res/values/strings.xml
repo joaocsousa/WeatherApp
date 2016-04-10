@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="location_london">London</string>
+    <string name="location_lisbon">Lisbon</string>
+    <string name="location_new_york">New York</string>
+    <string name="location_rio_de_jabeiro">Rio de Janeiro</string>
+    <string name="location_paris">Paris</string>
+    <string name="location_brussels">Brussels</string>
+    <string name="location_berlin">Brussels</string>
 </resources>

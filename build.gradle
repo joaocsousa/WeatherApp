@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-alpha9'
+        classpath 'com.android.tools.build:gradle:2.1.0-alpha3'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
         // NOTE: Do not place your application dependencies here; they belong
@@ -20,16 +20,18 @@ allprojects {
 
     ext {
         libraries = [
-                appcompat  : '23.1.1',
+                appcompat  : '23.2.1',
                 butterknife: '7.0.1',
-                rx         : '1.1.0',
-                dagger     : '2.0.2',
-                okhttp     : '3.0.1',
-                retrofit   : '2.0.0-beta3',
+                rx         : '1.1.1',
+                rxandroid  : '1.1.0',
+                dagger     : '2.1',
+                jsr250     : '1.0',
+                okhttp     : '3.2.0',
+                retrofit   : '2.0.0',
                 junit      : '4.12',
-                mockokhttp : '3.0.1',
-                espresso   : '2.2.1',
-                mockito    : '2.0.41-beta',
+                mockokhttp : '3.2.0',
+                espresso   : '2.2.2',
+                mockito    : '2.0.44-beta',
                 robolectric: '3.0'
         ]
     }
